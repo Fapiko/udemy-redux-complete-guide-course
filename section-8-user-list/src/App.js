@@ -31,13 +31,15 @@ function App() {
     }
 
     return (
-        <div>
+        // <Wrapper>
+        // <> is a React.Fragment
+        <React.Fragment>
             <AddUserForm onError={setErrorHandler} onAddUser={addUserHandler}/>
             <ErrorNotification onError={setErrorHandler} message={errorMessage}/>
-            <div>
-                <UsersList users={users}/>
-            </div>
-        </div>
+            <UsersList users={users}/>
+        </React.Fragment>
+        // </>
+        // </Wrapper>
     );
 }
 
